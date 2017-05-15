@@ -1,0 +1,52 @@
+
+<!DOCTYPE HTML>
+<html>
+<meta charset="utf-8">
+<script src="js/angular.js" type="text/javascript"></script>
+<head>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script src="app.js" type="text/javascript"></script>
+
+    <title>Trogon</title>
+
+</head>
+<body ng-app="MainApp">
+<h1>Story Adventure: Die Zeitmaschine</h1>
+<!--<div class="TextBox" ng-controller="ProgCtrl">
+    <li ng-repeat="x in Progress">{{x}}</li>
+</div>-->
+<div ng-controller="MainCtrl">
+    <div class="TextBox">
+        <div class="TextSection">
+            <ul id="AnsagenListe">
+                <li id="Ansage" ng-repeat="ansage in ansagen">
+                    {{ansage}} {{InputField}}
+                </li>
+            </ul>
+
+        </div>
+        <input ng-if="TextInput" type="text" id="InputField" ng-model="$parent.InputField">
+        <table id="Buttons">
+            <tr>
+                <td class="RunB" ng-click="weiter1(instructionNumber)">
+                    {{Button1}}
+                </td>
+                <td class="RunB" ng-click="weiter2(instructionNumber)">
+                    {{Button2}}
+                </td>
+            </tr>
+            <tr>
+                <td class="RunB" ng-click="weiter3(instructionNumber)">
+                    {{Button3}}
+                </td>
+                <td class="RunB" ng-click="weiter4(instructionNumber)">
+                    {{Button4}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+</body>
+</html>
